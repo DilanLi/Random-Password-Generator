@@ -6,13 +6,15 @@ This browser application takes in user-selected criteria and generates a random 
 ![Getting Started](./screenshot.png)
 
 ## Usage
-- open the link provided and click on the red "generate password" button, this activates the generator
-- user will be asked a series of questions to create the following criteria:
-    1. Length of the password (8 - 128 characters)
-    2. whether to include lowercase characters
-    3. whether to include uppercase characters
-    4. whether to include numbers
-    5. whether to include special characters
+- Open the link provided and click on the red "generate password" button, this activates the generator
+- User will be asked a series of questions to create the following criteria:
+    <ol>
+    <li>Length of the password (8 - 128 characters)</li>
+    <li>whether to include lowercase characters</li>
+    <li>whether to include uppercase characters</li>
+    <li>whether to include numbers</li>
+    <li>whether to include special characters</li>
+    </ol>
 - Once all questions answered, a random password that meets the user-selected criteria will be pushed into the text area above the red "generate password" button.
 
 ## link to the application
@@ -26,7 +28,7 @@ https://dilanli.github.io/Random-Password-Generator/
 - Everytime the user confirms a criteria, a corresponding string will be added to the possileAnswers variable. For example, if user confirms lowercase letters, then possibleAnswers += "abcdefghijklmnopqrstuvwxyz"
 - If the user chooses a password length that is less than 8 or greater than 128 characters, the application will prompt again to ask the user to choose a length that is in between 8 - 128 characters
 - If the user denies all criteria, the generatePassword() function will run again to ensure the user selects at least one criteria
-- When all prompt questions answered, possibleAnswers should hold all possible criteria the user has selected as one long string
+- When all prompt questions are answered, possibleAnswers should hold all possible criteria the user has selected as one long string
 - A new empty variable (newPassword) is created to hold value of the password that will be generated
 - A for loop is created to gather specific characters from the possibleAnswers string. The loop will run the times of passwordLength, picking a random index i from 0 - passwordLength, and adding the value of possibleAnswers[i] to the newPassword variable until the loop stops
 - The newly generated password is returned by the generatePassword() function and pushed to the text area above the red "generate password" buttion, where the user can copy and use
